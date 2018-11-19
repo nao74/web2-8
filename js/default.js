@@ -1,4 +1,4 @@
-var separate_time=function(time)
+var separate_time = function(time)
 {
   var sec = time.getSeconds();
   var min = time.getMinutes();
@@ -18,4 +18,4 @@ document.getElementById('countdown').textContent =
   counter[3] + '日' +
   counter[2] + '時' +
   counter[1] + '分' +
-  counter[0] + '秒' +
+  counter[0] + '秒';
