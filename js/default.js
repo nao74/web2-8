@@ -14,6 +14,7 @@ else
 {
   opt = document.querySelector('option[value="index.html"]');
 }
+opt.selected = true;
 
 document.getElementById('form').select.onchange = function()
 {
