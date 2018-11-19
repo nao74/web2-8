@@ -17,9 +17,8 @@ else
 
 document.getElementById('form').select.onchange = function()
 {
-    location.href = document.getElenemtById('form').select.value;
+  location.href = document.getElementById('form').select.value;
 }
-
 
 var separate_time = function(time)
 {
