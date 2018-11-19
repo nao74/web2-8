@@ -1,3 +1,26 @@
+
+function getFileName()
+{
+  return window.location.href.split('/').pop();
+}
+
+var filename = getFileName();
+var opt;
+if(filename === 'other.html')
+{
+  opt = document.querySelector('option[value="other.html"]');
+}
+else
+{
+  opt = document.querySelector('option[value="index.html"]');
+}
+
+document.getElementById('form').select.onchange = function()
+{
+    location.href = document.getElenemtById('form').select.value;
+}
+
+
 var separate_time = function(time)
 {
   var sec = Math.floor((time / 1000) % 60);
@@ -13,10 +36,6 @@ var update = function()
   var target = new Date(2020,7,24,0,0,0,0);
   var diff = target.getTime() - now.getTime();
   var counter = separate_time(diff);
-  document.getElementById('form').select.onchange = function()
-  {
-    location.href = document.getElenemtById('form').select.value;
-  }
   document.getElementById('countdown').textContent = 
     '東京オリンピックまであと ' +
     counter[3] + '日' +
